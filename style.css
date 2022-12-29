@@ -1,0 +1,13 @@
+*{
+    margin: 10px;
+    background-color: bisque;
+}
+h1{
+    
+    position: absolute;
+    bottom: 50%;
+    left: 40%;
+    background-color: tomato;
+    box-shadow: 3px 5px skyblue;
+    font-size: 30px;
+}

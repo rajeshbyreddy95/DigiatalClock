@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    
+    <div>
+        <h1 id="para" >hello world</h1>
+        <script>
+            let a = document.getElementById("para");
+            function time(){
+                let data = new Date();
+                let hour = data.getHours();
+                let hourcheck;
+                if(hour>12){
+                    hourcheck="PM";
+                }
+                else{
+                    hourcheck="AM";
+                }
+                let min = data.getMinutes();
+                let sc = data.getSeconds(); 
+                let sccheck;
+                if(sc<10){
+                    sccheck = "0" + sc;
+                }else{
+                    sccheck= sc;
+                }
+                let day = data.getDate();
+                let month = data.getMonth()+1;
+                let year = data.getFullYear();
+                a.innerHTML= hour + "::" + min + "::" + sccheck+ "::"+hourcheck+"-" + day + ":" + month + ":" + year;
+                let t= setTimeout(function () {
+                    time() }, 1000)
+            }
+            time();
+            
+        </script>
+    </div>
+</body>
+</html>
